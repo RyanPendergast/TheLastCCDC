@@ -1,0 +1,58 @@
+Create a firewall security policy that restricts the flow of packets both inbound and outbound. Each entry in the policy should be
+a specific as possible with regard to IP addressing/networks, transport protocols, port numbers, function codes, and application Protocols
+
+ Configure features in the network equipment and servers to issue a warning message prior to anyone logging in. Best practices standards are for the text of the message to include:
+- 1.) A clear admonition that only authorized users are permitted.
+- 2.) All network activity is being monitored and logged.
+- 3.) That activity logs and other monitored information can be used to investigate and prosecute unauthorized access
+- Configure a Legal Disclaimer for Network Access
+
+Use a software tool to evaluate the network services that are being offered on each internal server. Services are enumerated by TCP or UDP port numbers at the transport layer of the OSI model.
+- Respond with a business memo that we can forward to the Auditors that documents the services found on each server, in tabular fashion. Each row is a discovered server,
+  a column to describe the service name (ie. SMTP, FTP), a column that describes if it is TCP, UPD or BOTH with the port number (ex: TCP/80, UDP/53) indication if the service
+  was expected to be found on that server. A final column contains your notes on remediation needed (i.e. need to remove the service) if any.
+
+On each Window Server implement host firewalls with corresponding policies that affect the control of inbound packets to only permit those that are expected.
+- Describe in technical detail what packets profiles are permitted (for example: only TCP packets destined for service port 22 coming from a particular network 
+profile). With screen shots, show the server configuration that was used to accomplish this and log entries showing packets not fitting the profile being denied.
+
+On each Linux Server implement host firewalls with corresponding policies that effect the control of inbound packets to only permit those that are expected.
+- Describe in technical detail what packets profiles are permitted (for example: only TCP packets destined for service port 22 coming from a particular network profile).
+With screen shots, show the server configuration that was used to accomplish this and log entries showing packets not fitting the profile being denied.
+
+Create a Guideline that can be distributed to users which describes a way to compose secure passwords. Stress the importance of using secure passwords, then provide a method 
+for which this can be done, in a practical way, by any user. Include password length and key space size components
+- Create a Guideline for Users to Develop Secure Passwords
+
+Develop a solution using a cryptographic technique which will periodically test the integrity of web pages stored on disk. The solution to alert the server management 
+team to any unexpected changes to these pages. The integrity test should occur frequently, 5 minute intervals at the most.
+
+Create a network inventory report for management. The report should be tabular and describe each device together with: It’s function (server/application, firewall, switch, router etc...)
+- - IP address
+- - MAC address
+- - Operating Software and version
+- - Are there known vulnerabilities with this version
+- - Recommended upgrades, if an
+- - Network Inventory Management Report
+
+In order to properly evaluate network events and correlate them across all devices on the network: it is important to have their clocks accurately synchronized. Configure network 
+devices and all servers to accomplish this. Use industry best practices and protocols to accomplish this.
+- Select a server or network device to be the source of time for all other devices. This device should obtain its time from one of the NTP Pool time sources. This should be a stratum 2 or 3 device device.
+
+Configure protections so that time from the internal resource is only obtained from the configured NTP Pool time source, and each downstream device only obtains time from this internal
+resource. This could be accomplished with access lists or Passwords.
+- Configure Consistent Accurate Time on All Devices
+
+Select one of the servers in the topology to install a TFTP server. Firewall and other security policies will need to be modified to accommodate this. A dedicated directory should be 
+built and secured for this server to use. The server will be used to serve OS software in response to requests, and accept inbound files, such as configuration backup files. 
+The TFTP functionality should only be available to the internal network.
+
+Create a network diagram that shows network segments, the devices that interconnect them. Using arrows describe the expected packet flows between the segments. Each flow 
+should represent a particular IP protocol (ie. TCP, UDP) and application (or port number representations of applications). For example that is a TCP HTTP flow (port 80/443)
+flow between the segment that hosts a web server and the external network.
+
+Install the Cacti SNMP graphing tool on a server of your choice. The tool should be able to graph traffic statistics from each of the servers. You will need to enable SNMP as well as
+MySQL and other supporting software. You can find out more at www.cacti.net.
+
+
+
